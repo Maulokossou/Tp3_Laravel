@@ -85,20 +85,19 @@ class Etudiant extends Controller
     }
     
 
-    public function activate($id) {
+
+    public function activate($id){
         $student = Student::find($id);
-        $student->active = true;
-        $student->save();
-        
-        return redirect()->route('accueil');
-    }
-    
-    public function deactivate($id) {
-        $student = Student::find($id);
-        $student->active = false;
-        $student->save();
-        
-        return redirect()->route('accueil');
+        if ($student) {
+            if ($student->status) {
+                $student->status = false;
+            }
+            else {
+                $student->status = true;
+            }
+            $student->save();
+        }
+        return redirect()->route('accueil');  
     }
     
 }

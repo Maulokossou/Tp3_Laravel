@@ -25,6 +25,4 @@ Route::get('/modify/{id}',[Etudiant::class, "modifyForm"])->name("mode");
 
 Route::post('/updateStudentInformation/{id}',[Etudiant::class, "update"])->name("envoie");
 
-Route::post('/activate/{id}', [Etudiant::class, 'activate'])->name('activate');
-
-Route::post('/deactivate/{id}', [Etudiant::class, 'deactivate'])->name('deactivate');
+Route::post('/user/{id}', [Etudiant::class, 'activate'])->name('activate');
