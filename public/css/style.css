@@ -1,0 +1,168 @@
+*{
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style: none;
+}
+nav{
+    padding: 15px 0px;
+    position: fixed;
+    width:99.99%;
+    background-color: rgb(91, 91, 245);
+    z-index: 100;
+}
+nav h3{
+    color: white;
+}
+section h3{
+    position: absolute;
+    margin-top: 120px;
+    text-decoration: underline;
+    color: rgb(91, 91, 245);
+    /* margin-left: 500px; */
+}
+section p{
+    position: absolute;
+    margin-top: 150px;
+}
+table{
+    position: absolute;
+    margin-top: 200px;
+}
+tr{
+    border-style: 0;
+    
+}
+.button{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 1040px;
+}
+.description{
+    /* border: 1px solid black; */
+    /* display: flex; */
+    flex-direction: column;
+    width: 30%;
+    border-radius:10px;
+    margin:auto;
+    margin-top:120px;
+    background-color: whitesmoke;
+    border:1px solid  rgb(91, 91, 245);
+}
+.description td{
+    display: flex;
+}
+.description .image{
+    width: 42%;
+    margin: auto;
+}
+.description .image img{
+    border-radius: 50%;
+    border: 2px solid  rgb(91, 91, 245);
+    cursor:pointer;
+}
+.description .presentation{
+    display: flex;
+    align-items: center;
+    margin-top: -0.5%;
+}
+.description .presentation h3{
+    margin-top: -0.5%;
+    text-decoration:underline;
+}
+.description .hobbies {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+.description .hobbies h3{
+    margin-top: -0.5%;
+    text-decoration:underline;
+}
+.description .specialite {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+.description .specialite h3{
+    text-decoration:underline;
+}
+.description .top{
+    border-bottom:1px solid  rgb(91, 91, 245);
+    height:150px;
+    padding:7px 0px 8px 0px;
+}
+.description .bottom{
+    height:100px;
+    padding:10px;
+}
+.conseil{
+    display: flex;
+    align-items: center;
+    width:20%;
+    /* border:1px solid red; */
+    justify-content:space-between;
+    margin:auto;
+    margin-top:20px;
+}
+.conseil button{
+    background:none;
+    border:1px solid  rgb(91, 91, 245);
+    padding:10px 20px;
+    border-radius:3px;
+    cursor:pointer;
+    background:rgb(91, 91, 245);
+    color:white;
+}
+form{
+    border: 1px solid white;
+    width: 35%;
+    overflow: hidden;
+    padding: 25px 20px;
+    background-color:#0d6efd;
+    margin-top:160px;
+    height:340px;
+    margin-left:390px;
+    border-radius:5px;
+}
+label{
+  text-decoration:underline;
+}
+input{
+    display: block;
+    width: 96.5%;
+    padding: 9px 0px 9px 10px;
+    outline:none;
+    color:black;
+    margin:10px 0px;
+    background:whitesmoke;
+    border:1px solid white;
+    border-radius:3px;
+}
+#submit{
+    width: 30%;
+    text-align:center;
+    margin: auto;
+    /* border:1px solid red; */
+    border-radius:5px;
+    padding: 9px;
+    cursor:pointer;
+}
+#file{
+    color:black;
+    border:1px solid white;
+    background:whitesmoke;
+    padding: 8px 0px 8px 10px;
+}
+.text-center{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 35px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.text-center .link a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
