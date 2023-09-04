@@ -16,6 +16,7 @@
             <a href="#">Services</a>
             <a href="#">Blog</a>
             <a href="#">Contact</a>
+            <a href="{{route('logout')}}" class="btn btn-danger me-2">LOGOUT</a>
           </div>
     </nav>
     @yield('content')

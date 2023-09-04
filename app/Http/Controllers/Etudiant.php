@@ -39,13 +39,13 @@ class Etudiant extends Controller
             "spécialité"=>$data['specialite'],
             "images"=>$path,
         ]);
-        return redirect()->route('accueil');
+        return redirect()->route('index');
     }
 
     /* Ici la fontion permet de supprimer un étudiant ici mais le conserve dans la base de données */
     public function supprimer ($id){
         $etudiant_list=Student::where('id', $id)->delete();
-        return redirect() ->route('accueil');
+        return redirect() ->route('index');
     }
 
     /* Ici la fonction permet de modifier un étudiant.Il nous renvoie sur une page modify ou les informatiosn de l'étudiant en question sont pré-remplies */
@@ -81,7 +81,7 @@ class Etudiant extends Controller
 
         $student->save();
 
-        return redirect()->route('accueil');
+        return redirect()->route('index');
     }
     
 
@@ -97,7 +97,7 @@ class Etudiant extends Controller
             }
             $student->save();
         }
-        return redirect()->route('accueil');  
+        return redirect()->route('index');  
     }
     
 }
