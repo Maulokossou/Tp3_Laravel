@@ -11,7 +11,7 @@
     @if($id)       
          @include('includes.description')
         @else
-        <form action="{{route('profilStore')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('profilStore')}}" method="POST" enctype="multipart/form-data" style="height:380px; ">
             @csrf
             <label for="">Image:</label>
             <input type="file" name="images" id="file">

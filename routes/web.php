@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CoursController;
 use App\Http\Controllers\EnseignantsController;
 use App\Http\Controllers\AffectationController;
+use App\Http\Controllers\AffectationEtudiantController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,18 +51,22 @@ Route::controller(AffectationController::class)->group(function(){
     Route::get('/affectCours', "affectCours")->name("affectCours");
     Route::post('/storeEnseignant/{id}', "storeEnseignant")->name("storeEnseignant");
     Route::post('/enseignant/{enseignantId}/affectations', "showAffectations")->name("showAffectations");
-    /* Route::get('/supprimer/{id}', "supprimer")->name("delete"); */
+    Route::get('/supprimerAffectation/{enseignantId}/{coursId}', "supprimerAffectation")->name("supprimerAffectation");
 });
 Route::controller(UserController::class)->prefix('user')->group(function(){
     Route::get('/login',"login")->name("login");
     Route::get('/logout',"logout")->name("logout");
     Route::get('/register',"register")->name("register");
-    Route::get('/verify_email/{email}', 'verify')->name('url'); // Correct
+    Route::get('/verify_email/{email}', 'verify')->name('emailCreate'); // Correct
     Route::get('/verifyMail', 'verification')->name('verifyMail');
     Route::post('/store/register',"store")->name("store");
     Route::post('/restor_password/verifyMail', 'restor_password')->name('emailVerify');
     Route::post('/authentification/login', 'authentification')->name('authentification');
     Route::get('/verify_email/{email}', 'verifyPwd')->name('verifyPwd');
     Route::post('/update_pwd/{id}', 'updatePwd')->name('updatePwd');
+});
+Route::controller(AffectationEtudiantController::class)->prefix('user')->group(function(){
+    Route::get('/affectCoursEtudianthome',"affectCoursEtudiant")->name("affectCoursEtudianthome");
+    
 });
 

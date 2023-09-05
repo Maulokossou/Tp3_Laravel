@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Enseignants;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Cours;
 
 class EnseignantsController extends Controller
@@ -36,7 +38,7 @@ class EnseignantsController extends Controller
                 return redirect()->route('enseignanthome');
     } 
     public function enseignanthome(){
-        $enseignants_list= Enseignants::all();
+        $enseignants_list= Enseignants::paginate(6);
         return view ('enseignant.enseignanthome', compact ("enseignants_list"));
     }
     public function supprimer ($id){

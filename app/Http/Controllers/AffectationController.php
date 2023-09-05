@@ -43,16 +43,4 @@ class AffectationController extends Controller
         return redirect()->back()->with("Success", "Vous venez d'affecter un cours!");
     }
 
- /*    public function showAffectations($enseignantId, $coursId)
-    {
-        // Récupérez les affectations d'enseignants en fonction de l'ID de l'enseignant et du cours
-        $affectations = AffectationProfesseur::where('enseignant_id', $enseignantId)
-            ->where('cours_id', $coursId)
-            ->get();
-
-        // Transmettez les données à votre vue
-        return view('enseignant.affectationCours', compact('affectations'));
-    }
-    */
-
 }

@@ -1,12 +1,12 @@
 @extends('master')
 @section('content')
 <section>
-  <h3>LISTE DES ÉTUDIANTS:</h3>
+  <h3>Liste des étudiants:</h3>
 </section>
 <div class="button" >
   <button type="button" style="background:#2249f393;" class="btn btn-primary"><a href="{{route('enseignanthome')}}" style="text-decoration: none; color:white;">Créer un enseignant</a></button>
   <button type="button" style="background:#2249f393; " class="btn btn-primary"><a href="{{route('courshome')}}" style="text-decoration: none; color:white;">Gestion des cours</a></button>
-  <button type="button" style="background:#2249f393;" class="btn btn-primary"><a href="" style="text-decoration: none; color:white;">Attribution des cours</a></button>
+  <button type="button" style="background:#2249f393;" class="btn btn-primary"><a href="{{route('affectCoursEtudianthome')}}" style="text-decoration: none; color:white;">Attribution des cours</a></button>
   <button type="button" style="background:#2249f393; margin-right:50px;" class="btn btn-primary"><a href="{{route('VoirPlus')}}" style="text-decoration: none; color:white;">Ajouter un étudiant</a></button>
 </div>
 <table class="table table-striped" style=" margin-top:220px" >
@@ -43,7 +43,9 @@
             </td>
           </tr>
         @endforeach
-
+        <div style="position: absolute; margin-top:80px; background:none;">
+          {{$etudiant_list->links()}}
+        </div>
   </tbody>
 </table>
 @endsection

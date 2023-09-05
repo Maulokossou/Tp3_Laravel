@@ -1,10 +1,10 @@
 @extends('master')
 @section('content')
 <section>
-  <h3 style="margin-left:500px">AFFECTATION DE COURS:</h3>
+  <h3 style="margin-left:500px;">AFFECTATION DE COURS:</h3>
 </section>
 
-<div class="row g-2" style='margin-top:180px; position:absolute;  width:100%;   height:50%; padding:20px 15px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;border-radius:5px'> 
+<div class="row g-2" style='margin-top:160px; position:absolute;  width:100%;   height:60%; padding:20px 15px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;border-radius:5px'> 
     <div class="col-md" >
         <h4 style="">{{$item['firstname']}} {{$item['lastname']}}</h4>
         <div class="form-floating" >
@@ -20,9 +20,9 @@
             </form>
         </div>
     </div>
-    <div class="col-md" style="width:100%;" >
+    <div class="col-md" style="width:100%; margin-top:40px" >
       <div class="form-floating">
-        <table class="tableau-gauche" style="width:100%;">
+        <table class="tableau-gauche" style="width:100%;height:100%">
             <tr>
                 <td>Id_aff</td>
                 <td>Cours</td>

@@ -47,7 +47,7 @@ class UserController extends Controller
 
         /*Ici je créé l'Url d'activation */
         $url=URL::temporarySignedRoute(
-           'url' , 
+           'emailCreate' , 
            now()->addMinutes(30),['email'=>$data['email']]
         );
 

@@ -3,7 +3,7 @@
 <section>
   <h3>LISTE DES ENSEIGNANTS:</h3>
 </section>
-<div class="button" style="margin-left:960px">
+<div class="button" style="margin-left:1065px">
   <button type="button" style="background:#2249f393;width:200px;" class="btn btn-primary"><a href="{{route('addenseignant')}}" style="text-decoration: none; color:white;">Ajouter un enseignant</a></button>
 </div>
 <table class="table table-striped" style=" margin-top:220px" >
@@ -31,7 +31,9 @@
             </td>
           </tr>
         @endforeach
-
+        <div style="position: absolute; margin-top:80px; background:none;">
+          {{$enseignants_list->links()}}
+        </div>
   </tbody>
 </table>
 @endsection

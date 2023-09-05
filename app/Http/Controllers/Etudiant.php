@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Student;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -12,8 +14,7 @@ class Etudiant extends Controller
 {
     public function index(){
 
-        $etudiant_list= Student::all();
-
+        $etudiant_list= Student::paginate(10);
         session (['etudiant_list'=>$etudiant_list]);
         return view ('accueil', compact ("etudiant_list"));
     }

@@ -14,15 +14,28 @@ nav{
     padding: 15px 0px;
     position: fixed;
     width:99.99%;
-    background-color: #2249f393;
+    background-color: #ffffff;
     z-index: 100;
+    color:rgb(102, 101, 101);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+div nav{
+    box-shadow:none;
+    background: none;
+    position: absolute;
+    z-index: 50;
+    /* margin-top:860px; */
+    margin-left: 1140px;
+}
+div nav ul li {
+    background: none;
 }
 nav h3{
-    color: white;
+    color: #2249f393;
 }
 section h3{
     position: absolute;
-    margin-top: 120px;
+    margin-top: 160px;
     text-decoration: underline;
     color: #2249f393;
     /* margin-left: 500px; */
@@ -130,7 +143,7 @@ form{
     overflow: hidden;
     padding: 25px 20px;
     background-color:#2249f393;
-    margin-top:160px;
+    margin-top:100px;
     height:340px;
     margin-left:390px;
     border-radius:5px;
@@ -169,11 +182,11 @@ input{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:15px 35px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding:15px 5px 15px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .text-center .link a{
-    color:white;
+    color:black;
     text-decoration:none;
     margin-left:25px;
 }

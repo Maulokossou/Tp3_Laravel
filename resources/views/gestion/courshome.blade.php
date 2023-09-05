@@ -3,7 +3,7 @@
 <section>
   <h3>LISTE DES COURS:</h3>
 </section>
-<div class="button" style="margin-left: 870px;">
+<div class="button" style="margin-left: 895px;">
  
   <button type="button" style="background:#2249f393; " class="btn btn-primary"><a href="{{route('addCategorie')}}" style="text-decoration: none; color:white;">Ajouter une catégorie</a></button>
   <button type="button" style="background:#2249f393;" class="btn btn-primary"><a href="{{route('addcours')}}" style="text-decoration: none; color:white;">Ajouter un cours</a></button>
@@ -33,7 +33,9 @@
         </td>
       </tr>
     @endforeach
-
+    <div style="position: absolute; margin-top:80px; background:none;">
+      {{$cours_list->links()}}
+    </div>
   </tbody>
 </table>
 @endsection

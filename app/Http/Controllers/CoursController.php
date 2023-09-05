@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cours;
 use App\Models\Categorie;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class CoursController extends Controller
 {   
@@ -61,7 +63,7 @@ class CoursController extends Controller
 
 
     public function courshome(){
-        $cours_list= Cours::all();
+        $cours_list= Cours::paginate(8);
         return view ('gestion.courshome', compact ("cours_list"));
     }
 
